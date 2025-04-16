@@ -9,18 +9,19 @@ describe("recipes", () => {
     test("register a recipe with options", () =>
       spec.rewriteRun(
         {
+            //language=json
             ...json(
               `
-              {
-                "name": "@openrewrite/rewrite-example",
-                "version": "0",
-              }
+                  {
+                      "name": "@openrewrite/rewrite-example",
+                      "version": "0"
+                  }
               `,
               `
-              {
-                "name": "@openrewrite/rewrite-example",
-                "version": "1.0.0",
-              }
+                  {
+                      "name": "@openrewrite/rewrite-example",
+                      "version": "1.0.0"
+                  }
               `
             ),
             path: "package.json"
