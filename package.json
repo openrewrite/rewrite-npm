@@ -1,0 +1,29 @@
+{
+  "name": "@openrewrite/rewrite-npm",
+  "version": "0",
+  "license": "Moderne Source Available License",
+  "description": "OpenRewrite recipes for NPM.",
+  "homepage": "https://github.com/openrewrite/rewrite",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "src/**"
+  ],
+  "exports": {
+    ".": "./dist/src/index.js"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist && tsc --build tsconfig.build.json",
+    "dev": "tsc --watch -p tsconfig.json",
+    "test": "npm run build && jest"
+  },
+  "dependencies": {
+    "@openrewrite/rewrite": "^8.50.0-20250416.85117"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.13",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2"
+  }
+}
