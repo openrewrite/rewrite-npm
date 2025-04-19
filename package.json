@@ -1,5 +1,5 @@
 {
-  "name": "@openrewrite/rewrite-npm",
+  "name": "@openrewrite/recipes-npm",
   "version": "0",
   "license": "Moderne Source Available License",
   "description": "OpenRewrite recipes for NPM.",
@@ -18,7 +18,7 @@
     "test": "npm run build && jest"
   },
   "dependencies": {
-    "@openrewrite/rewrite": "^8.50.0-20250416.101721"
+    "@openrewrite/rewrite": "^8.50.0-20250419.101725"
   },
   "devDependencies": {
     "@types/jest": "^29.5.13",

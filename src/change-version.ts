@@ -1,5 +1,5 @@
 import {ExecutionContext, Option, Recipe, Registered} from "@openrewrite/rewrite";
-import {Json, JsonKind, JsonVisitor, Member} from "@openrewrite/rewrite/json";
+import {Json, JsonDocument, JsonKind, JsonVisitor, Member} from "@openrewrite/rewrite/json";
 
 @Registered
 export class ChangeVersion extends Recipe {
@@ -20,6 +20,14 @@ export class ChangeVersion extends Recipe {
     get editor(): JsonVisitor<ExecutionContext> {
         const v = this.version;
         return new class extends JsonVisitor<ExecutionContext> {
+            protected async visitDocument(document: JsonDocument, p: ExecutionContext): Promise<Json | undefined> {
+                // Only visit package.json and package-lock.json files
+                if (!(document.sourcePath.endsWith("package.json") || document.sourcePath.endsWith("package-lock.json"))) {
+                    return document;
+                }
+                return super.visitDocument(document, p);
+            }
+
             protected async visitMember(member: Member, p: ExecutionContext): Promise<Json | undefined> {
                 return this.produceJson<Member>(await super.visitMember(member, p), p, draft => {
                     let key = member.key.element;

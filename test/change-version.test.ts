@@ -2,11 +2,11 @@ import {RecipeSpec} from "@openrewrite/rewrite/test";
 import {ChangeVersion} from "../src";
 import {json} from "@openrewrite/rewrite/json";
 
-describe("recipes", () => {
+describe('ChangeVersion', () => {
     const spec = new RecipeSpec();
     spec.recipe = new ChangeVersion({version: "1.0.0"});
 
-    test("register a recipe with options", () =>
+    test("change the version in `package.json`", () =>
       spec.rewriteRun(
         {
             //language=json
