@@ -1,7 +1,6 @@
-import {ExecutionContext, Option, Recipe, Registered} from "@openrewrite/rewrite";
+import {ExecutionContext, Option, Recipe} from "@openrewrite/rewrite";
 import {Json, JsonDocument, JsonKind, JsonVisitor, Member} from "@openrewrite/rewrite/json";
 
-@Registered
 export class ChangeVersion extends Recipe {
     name = "org.openrewrite.npm.change-version";
     displayName = "Change version in `package.json`";

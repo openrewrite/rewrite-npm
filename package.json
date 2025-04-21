@@ -19,7 +19,7 @@
     "test": "npm run build && jest"
   },
   "peerDependencies": {
-    "@openrewrite/rewrite": "^8.50.0-20250419.101725"
+    "@openrewrite/rewrite": "^8.51.0-20250420.101722"
   },
   "devDependencies": {
     "@types/jest": "^29.5.13",
