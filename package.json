@@ -18,8 +18,8 @@
     "dev": "tsc --watch -p tsconfig.json",
     "test": "npm run build && jest"
   },
-  "peerDependencies": {
-    "@openrewrite/rewrite": "^8.51.0-20250420.101722"
+  "dependencies": {
+    "@openrewrite/rewrite": "^8.51.0-20250421.101722"
   },
   "devDependencies": {
     "@types/jest": "^29.5.13",
