@@ -1,6 +1,6 @@
 {
   "name": "@openrewrite/recipes-npm",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "license": "Moderne Source Available License",
   "description": "OpenRewrite recipes for NPM.",
   "homepage": "https://github.com/openrewrite/rewrite",
