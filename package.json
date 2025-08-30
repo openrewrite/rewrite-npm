@@ -4,14 +4,13 @@
   "license": "Moderne Source Available License",
   "description": "OpenRewrite recipes for NPM.",
   "homepage": "https://github.com/openrewrite/rewrite",
-  "main": "./dist/src/index.js",
-  "types": "./dist/src/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
-    "dist/src/**",
-    "src/**"
+    "dist/**"
   ],
   "exports": {
-    ".": "./dist/src/index.js"
+    ".": "./dist/index.js"
   },
   "scripts": {
     "build": "rm -rf ./dist && tsc --build tsconfig.build.json",

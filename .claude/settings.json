@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(node:*)",
+      "Bash(npm ls:*)",
+      "Bash(npm install)"
+    ],
+    "additionalDirectories": [
+      "/Users/jon/Projects/github/openrewrite/rewrite-javascript",
+      "/Users/jon/Projects/github/openrewrite/rewrite/rewrite-javascript"
+    ]
+  }
+}
